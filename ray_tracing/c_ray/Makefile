@@ -10,6 +10,12 @@ clean:
 	rm -f image.ppm \
 	&& rm -f build/*
 
+dev:
+	rm -f image.ppm \
+	&& g++ -std=c++2a -o build/output main.cpp \
+	&& du -sh build/output \
+	&& build/output
+
 # #Tell make to make one .out file for each .cpp file found in the current directory
 # all: $(patsubst %.cpp, %.out, $(wildcard *.cpp))
 

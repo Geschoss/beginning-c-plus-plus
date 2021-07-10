@@ -1,0 +1,17 @@
+{
+    "name": "ts_ray",
+    "private": true,
+    "license": "MIT",
+    "version": "0.0.0",
+    "scripts": {
+        "generate": "yarn --silent start > image.ppm && open image.ppm",
+        "start": "ts-node src/main.ts",
+        "lint": "npx prettier --write ."
+    },
+    "dependencies": {
+        "@types/node": "^16.3.0",
+        "prettier": "^2.3.2",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.3.2"
+    }
+}
