@@ -1,13 +1,22 @@
-import { wrire_color } from './color';
-import { ray, ray_color } from './ray';
+import { ray } from './ray/ray';
 import { log, processLog } from './std';
-import { divided, minus, multi, point3, sum, vec3 } from './vec3';
+import { ray_color, wrire_color } from './color';
+import {
+    divided,
+    minus,
+    multi,
+    point3,
+    sum,
+    vec3,
+} from './vec';
 
 (() => {
     // Image
     const aspect_ration = 16.0 / 9.0;
     const image_width = 400;
-    const image_height = Math.floor(image_width / aspect_ration);
+    const image_height = Math.floor(
+        image_width / aspect_ration
+    );
 
     // Camera
     const viewport_height = 2.0;
@@ -18,7 +27,10 @@ import { divided, minus, multi, point3, sum, vec3 } from './vec3';
     const horizontal = vec3(viewport_width, 0, 0);
     const vertical = vec3(0, viewport_height, 0);
     const lower_left_corner = minus(
-        minus(minus(origin, divided(horizontal, 2)), divided(vertical, 2)),
+        minus(
+            minus(origin, divided(horizontal, 2)),
+            divided(vertical, 2)
+        ),
         vec3(0, 0, focal_length)
     );
 
@@ -32,7 +44,10 @@ import { divided, minus, multi, point3, sum, vec3 } from './vec3';
 
             const direction = minus(
                 sum(
-                    sum(lower_left_corner, multi(u, horizontal)),
+                    sum(
+                        lower_left_corner,
+                        multi(u, horizontal)
+                    ),
                     multi(v, vertical)
                 ),
                 origin
