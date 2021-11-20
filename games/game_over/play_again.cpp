@@ -9,6 +9,14 @@ int main()
         cout << "\nDo you want to play again? (y/n): ";
         cin >> again;
     }
-    cout << "\nOkay. bye";
+
+    again = 'n';
+
+    do {
+        cout << "\nNo mb you want to play again!";
+        cout << "\nDo you want to play again? (y/n): ";
+        cin >> again;
+    } while (again == 'y');
+
     return 0;
 }
