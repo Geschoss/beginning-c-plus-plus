@@ -69,7 +69,10 @@
         "typeinfo": "cpp",
         "unordered_map": "cpp",
         "utility": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__functional_03": "cpp",
+        "memory_resource": "cpp",
+        "filesystem": "cpp"
     },
     "prettier.printWidth": 60,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: WebKit, ColumnLimit: 80 }"
