@@ -2,8 +2,7 @@
 
 using namespace std;
 
-class Critter
-{
+class Critter {
 public:
     Critter(int hunger = 0);
     int hunger;
@@ -11,16 +10,17 @@ public:
 };
 
 Critter::Critter(int hunger)
+    : hunger(hunger)
 {
     cout << "A new critter has been born!" << endl;
-    hunger = hunger;
 }
 void Critter::greet()
 {
     cout << "Hi, I'm a critter. My hunger level is " << hunger << ".\n\n";
 }
 
-int main() {
+int main()
+{
     Critter crit(7);
     crit.greet();
 
