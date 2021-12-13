@@ -32,6 +32,7 @@ int main()
     Critter crit(5);
     // cout << crit.m_hunger;
     cout << "Calling getHunger(): " << crit.getHunger() << "\n\n";
+    
     cout << "Calling setHunger() with -1\n";
     crit.setHunger(-1);
 
